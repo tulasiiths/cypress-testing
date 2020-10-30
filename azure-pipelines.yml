@@ -1,4 +1,11 @@
 # Node.js
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/cypress/reports'
+    mergeTestResults: true
+    testRunTitle: 'Publish test results'
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
