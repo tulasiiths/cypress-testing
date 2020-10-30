@@ -1,0 +1,22 @@
+{
+    "name": "zign-sec-testing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "cy:open:local": "cypress open --env configFile=local",
+        "cy:open:test": "cypress open --env configFile=test",
+        "cy:open:dev": "cypress open --env configFile=dev",
+        "cy:open:prod": "cypress open --env configFile=prod",
+        "cy:open:staging": "cypress open --env configFile=staging",
+        "cy:ipwhitelisting:test": "cypress run --spec \"cypress/integration/ipWhitelisting_spec.js\" --env configFile=test",
+        "cy:ipwhitelisting:local": "cypress run --spec \"cypress/integration/ipWhitelisting_spec.js\" --env configFile=local",
+        "cy:portal:test": "cypress run --spec \"cypress/integration/portal/**/*.spec.js\" --browser chrome --headless --env configFile=test"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress-file-upload": "^4.1.1",
+        "cypress-iframe": "^1.0.1"
+    }
+}
