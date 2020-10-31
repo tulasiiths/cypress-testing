@@ -30,16 +30,3 @@ steps:
     mergeTestResults: true
     testRunTitle: 'Publish test results'
     
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
-- task: ExtractFiles@1
-  inputs:
-    archiveFilePatterns: 'test.zip'
-    destinationFolder: '$(SystemDefaultWorkingDirectory)/tests'
-    cleanDestinationFolder: true
-    overwriteExistingFiles: false
