@@ -4,6 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        
+
+ "cypress:open": "cypress open"
         "cy:open:local": "cypress open --env configFile=local",
         "cy:open:test": "cypress open --env configFile=test",
         "cy:open:dev": "cypress open --env configFile=dev",
