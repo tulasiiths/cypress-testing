@@ -21,7 +21,7 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'cypress open'
+    customCommand: './node_modules/.bin/cypress open'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
